@@ -38,11 +38,11 @@ function searchRecipe(event) {
         'feijoada à portuguesa': '/Pages/Pratos_Principais.html#Feijoada à Portuguesa',
 
         // Sobremesas
-        'sobremesas': '/Pages/Sobremesas.html',
-        'mousse de chocolate': '/Pages/Sobremesas.html#Mousse de Chocolate',
-        'pudim de leite': '/Pages/Sobremesas.html#Pudim de Leite',
-        'pastel de nata': '/Pages/Sobremesas.html#Pastel de Nata',
-        'azevias de batata doce': '/Pages/Sobremesas.html#Azevias de Batata Doce',
+        'sobremesas': '../Pages/Sobremesas.html',
+        'mousse de chocolate': '../Pages/Sobremesas.html#Mousse de Chocolate',
+        'pudim de leite': '../Pages/Sobremesas.html#Pudim de Leite',
+        'pastel de nata': '../Pages/Sobremesas.html#Pastel de Nata',
+        'azevias de batata doce': '../Pages/Sobremesas.html#Azevias de Batata Doce',
         // Adicione mais receitas conforme necessário
     };
     
