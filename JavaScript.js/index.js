@@ -21,28 +21,28 @@ function searchRecipe(event) {
     // Mapa de receitas e suas páginas
     const recipePages = {
         // Entradas
-        'entradas': '../Pages/Entradas.html',
-        'bruschetta': '../Pages/Entradas.html#Bruschetta Italiana',
-        'pasteis de bacalhau': '../Pages/Entradas.html#Pastéis de Bacalhau',
+        'entradas': '/MundoDasDelicias/Pages/Entradas.html',
+        'bruschetta': '/MundoDasDelicias/Pages/Entradas.html#Bruschetta Italiana',
+        'pasteis de bacalhau': '/MundoDasDelicias/Pages/Entradas.html#Pastéis de Bacalhau',
         
         // Sopas
-        'sopas': '../Pages/Sopas.html',
-        'caldo verde': '../Pages/Sopas.html#Caldo Verde',
-        'sopa de legumes': '../Pages/Sopas.html#Sopa de Legumes',
-        'creme de abobora': '../Pages/Sopas.html#Creme de Abóbora',
+        'sopas': '/MundoDasDelicias/Pages/Sopas.html',
+        'caldo verde': '/MundoDasDelicias/Pages/Sopas.html#Caldo Verde',
+        'sopa de legumes': '/MundoDasDelicias/Pages/Sopas.html#Sopa de Legumes',
+        'creme de abobora': '/MundoDasDelicias/Pages/Sopas.html#Creme de Abóbora',
         
         // Pratos Principais
-        'pratos principais': '../Pages/Pratos_Principais.html',
-        'frango assado': '../Pages/Pratos_Principais.html#Frango Assado',
-        'bacalhau com natas': '../Pages/Pratos_Principais.html#Bacalhau com Natas',
-        'feijoada à portuguesa': '../Pages/Pratos_Principais.html#Feijoada à Portuguesa',
+        'pratos principais': '/MundoDasDelicias/Pages/Pratos_Principais.html',
+        'frango assado': '/MundoDasDelicias/Pages/Pratos_Principais.html#Frango Assado',
+        'bacalhau com natas': '/MundoDasDelicias/Pages/Pratos_Principais.html#Bacalhau com Natas',
+        'feijoada à portuguesa': '/MundoDasDelicias/Pages/Pratos_Principais.html#Feijoada à Portuguesa',
 
         // Sobremesas
-        'sobremesas': '../Pages/Sobremesas.html',
+        'sobremesas': '/MundoDasDelicias/Pages/Sobremesas.html',
         'mousse de chocolate': '/MundoDasDelicias/Pages/Sobremesas.html#Mousse de Chocolate',
-        'pudim de leite': '../Pages/Sobremesas.html#Pudim de Leite',
-        'pastel de nata': '../Pages/Sobremesas.html#Pastel de Nata',
-        'azevias de batata doce': '../Pages/Sobremesas.html#Azevias de Batata Doce',
+        'pudim de leite': '/MundoDasDelicias/Pages/Sobremesas.html#Pudim de Leite',
+        'pastel de nata': '/MundoDasDelicias/Pages/Sobremesas.html#Pastel de Nata',
+        'azevias de batata doce': '/MundoDasDelicias/Pages/Sobremesas.html#Azevias de Batata Doce',
         // Adicione mais receitas conforme necessário
     };
     
