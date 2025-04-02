@@ -18,17 +18,17 @@
      <img class="logo" src="Images/Logo.png" alt="Logo"></img>
       <nav class="navbar">
         <ul>
-          <li><a href="../MundoDasDelicias">Home</a> </li>
+          <li><a href="../">Home</a> </li>
           <li class="dropdown">
-            <a href="../MundoDasDelicias/Pages/Menu.html" class="dropbtn"> Menu </a>
+            <a href="../Pages/Menu.html" class="dropbtn"> Menu </a>
             <div class="dropdown-content">
-              <a href="../MundoDasDelicias/Pages/Entradas.html">Entradas</a>
-              <a href="../MundoDasDelicias/Pages/Sopas.html">Sopas</a>
-              <a href="../MundoDasDelicias/Pages/Pratos_Principais.html">Pratos Principais</a>
-              <a href="../MundoDasDelicias/Pages/Sobremesas.html">Sobremesas</a>
+              <a href="../Pages/Entradas.html">Entradas</a>
+              <a href="../Pages/Sopas.html">Sopas</a>
+              <a href="../Pages/Pratos_Principais.html">Pratos Principais</a>
+              <a href="../Pages/Sobremesas.html">Sobremesas</a>
             </div>
          </li>  
-          <li> <a href="../MundoDasDelicias/Pages/Contactos.html">Contactos</a> </li>
+          <li> <a href="../Pages/Contactos.html">Contactos</a> </li>
         </ul>
       </nav>
       <div class="search-bar">
@@ -47,13 +47,13 @@
   <img class="logo" src="Images/Logo.png" alt="Logo"></img>
   <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
   <ul class="nav-links">
-      <li><a href="../">Home</a></li>
-      <li><a href="../MundoDasDelicias/Pages/Menu.html">Menu</a></li>
-      <li><a href="../MundoDasDelicias/Pages/Contactos.html">Contactos</a></li>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="../Pages/Menu.html">Menu</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="../Pages/Contactos.html">Contactos</a></li>
   </ul>
   <input type="text" class="search-bar" placeholder="Search...">
 </nav>
-
 <div class="break-bar"></div>
 
 <main>
@@ -63,17 +63,21 @@
             <p class="lead" style="font-weight: 400;"> Faça deste o seu destino online para explorar o maravilhoso mundo da culinária! Este site foi criado com a paixão por cozinhar e a vontade de compartilhar receitas deliciosas e acessíveis para todos os níveis de habilidade na cozinha. </p>
         </section>
 
+        
         <section id="carousel" class="mb-0">
           <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
             <div class="carousel-progress">
               <div class="carousel-progress-bar"></div>
           </div>
+              <!-- Indicators/dots -->
               <div class="carousel-indicators" style="margin-bottom: 5px;">
                   <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active"></button>
                   <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="1"></button>
                   <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="2"></button>
                   <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="3"></button>
               </div>
+
+              <!-- The slideshow/carousel -->
               <div class="carousel-inner">
                   <div class="carousel-item active">
                       <img src="Images/Pasteis_de_Bacalhau.jpg" class="d-block w-100" alt="Food 1">
@@ -105,6 +109,7 @@
                 </div>
               </div>
 
+              <!-- Left and right controls/icons -->
               <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon"></span>
               </button>
@@ -113,7 +118,10 @@
               </button>
           </div>
       </section>
+
+      
     </div>
+
 <div>
 
   <div class="break-bar"></div>
@@ -123,15 +131,15 @@
     <div class="container">
         <h2 class="text-center mb-3">Receitas da Semana</h2>
         <div class="row">
-          
             <!-- Receita 1 -->
             <div class="col-md-4">
                 <div class="recipe-card">
                   <div class="recipe-info">
                   <h3>Pastéis de Bacalhau</h3>
                     <img src="Images/Pasteis_de_Bacalhau.jpg" alt="Receita 1" class="recipe-img">
+                    
                         <p class="recipe-description">Crocantes por fora e macios por dentro, os tradicionais bolinhos de bacalhau portugueses.</p>
-                        <a href="../MundoDasDelicias/Pages/Entradas.html#Bolinhos de Bacalhau" class="btn btn-success">Ver Receita</a>
+                        <a href="..\Pages/Entradas.html#Bolinhos de Bacalhau" class="btn btn-success">Ver Receita</a>
                     </div>
                 </div>
             </div>
@@ -143,7 +151,7 @@
                     <h3>Bacalhau com Natas</h3>
                     <img src="Images/Bacalhau_com_Natas.jpeg" alt="Receita 2" class="recipe-img">
                         <p class="recipe-description">Clássico prato português de bacalhau gratinado com molho bechamel e natas.</p>
-                        <a href="../MundoDasDelicias/Pages/Pratos_Principais.html#Bacalhau com Natas" class="btn btn-success">Ver Receita</a>
+                        <a href="..\Pages/Pratos_Principais.html#Bacalhau com Natas" class="btn btn-success">Ver Receita</a>
                     </div>
                 </div>
             </div>
@@ -155,7 +163,7 @@
                     <h3>Mousse de Chocolate</h3>
                     <img src="Images/Mousse_Chocolate.png" alt="Receita 3" class="recipe-img">
                         <p class="recipe-description">Mousse de chocolate cremosa e aerada, uma sobremesa clássica e irresistível.</p>
-                        <a href="../MundoDasDelicias/Pages/Sobremesas.html#Mousse de Chocolate" class="btn btn-success">Ver Receita</a>
+                        <a href="..\Pages/Sobremesas.html#Mousse de Chocolate" class="btn btn-success">Ver Receita</a>
                     </div>
                 </div>
             </div>
@@ -168,7 +176,7 @@
     <h2 class="mb-2 fw-bold">Contacte-nos!</h2>
     <p class="lead mb-4 fw-normal">Envie-nos uma mensagem ou contacte-nos se quiser entrar na nossa equipa</p>
     <div class="d-flex justify-content-center gap-3">
-      <a href="../MundoDasDelicias/Pages/Contactos.html" class="btn btn-success btn-lg">Enviar Mensagem</a>
+      <a href="..\Pages/Contactos.html" class="btn btn-success btn-lg">Enviar Mensagem</a>
     </div>
   </div>
 </section>
@@ -191,9 +199,9 @@
           <div class="col-md-2 col-6 offset-md-1 mb-3">
               <h5>Links</h5>
               <div class="d-flex flex-column">
-                  <a href="../MundoDasDelicias/index.html">Home</a>
-                  <a href="../MundoDasDelicias/Pages/Menu.html"> Menu </a>
-                  <a href="../MundoDasDelicias/Pages/Contactos.html">Contactos</a>
+                  <a href="../index.html">Home</a>
+                  <a href="../Pages/Menu.html"> Menu </a>
+                  <a href="../Pages/Contactos.html">Contactos</a>
               </div>
           </div>
             <div class="col-md-3 col-6 mb-3">
@@ -207,6 +215,8 @@
       </div>
   </div>
 </footer>
+
+
 
 </body>
 </html>
