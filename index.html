@@ -53,6 +53,36 @@
   </ul>
   <input type="text" class="search-bar" placeholder="Search...">
 </nav>
+
+<nav class="sticky-navbar">
+     <img class="logo" src="Images/Logo.png" alt="Logo"></img>
+      <nav class="navbar">
+        <ul>
+          <li><a href="../MundoDasDelicias">Home</a> </li>
+          <li class="dropdown">
+            <a href="../MundoDasDelicias/Pages/Menu.html" class="dropbtn"> Menu </a>
+            <div class="dropdown-content">
+              <a href="../MundoDasDelicias/Pages/Entradas.html">Entradas</a>
+              <a href="../MundoDasDelicias/Pages/Sopas.html">Sopas</a>
+              <a href="../MundoDasDelicias/Pages/Pratos_Principais.html">Pratos Principais</a>
+              <a href="../MundoDasDelicias/Pages/Sobremesas.html">Sobremesas</a>
+            </div>
+         </li>  
+          <li> <a href="../MundoDasDelicias/Pages/Contactos.html">Contactos</a> </li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <form role="search" onsubmit="searchRecipe(event)">
+          <div class="input-group">
+            <input type="search" id="searchInput" class="form-control" placeholder="Procurar..." aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">
+              <div class="bi bi-search-heart" style="color: red;"></div>
+            </button>
+          </div>
+        </form>
+      </div> 
+</nav>
+    
 <div class="break-bar"></div>
 
 <main>
