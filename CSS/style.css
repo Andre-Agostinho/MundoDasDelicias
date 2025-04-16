@@ -1,10 +1,38 @@
 
 .header {
-  display:flex;
-  padding: 10px 25px;
+  display: flex;
+  padding: 20px 25px;
   background-color: #fbf8f5;
   align-items: center;
   justify-content: space-between;
+  z-index: 1000;
+  transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+@media (min-width: 760px) {
+.sticky-navbar {
+  display: none;  
+}
+
+.sticky-navbar.active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 25px;
+  background-color: #fbf8f5;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: padding 0.3s ease;
+  height: 110px;
+}
+
+
+.sticky-navbar.active .logo {
+  transform: scale(0.6);
+  transition: transform 0.3s ease;
+}
 }
 
 .break-bar {
@@ -18,10 +46,11 @@
 }
 
 .logo {
-  width: 15%;
-  height: 15%;
+  width: auto;
+  height: auto;
   margin-left: 3%;
   object-fit: fit;
+  transition: transform 0.3s ease;
 }
 
 .navbar {
@@ -98,6 +127,7 @@ li a, .dropbtn {
   text-decoration: none;
   display: block;
   text-align: center;
+  font-size:x-large;
 }
 
 /* cor de fundo dos botoes dropdown */
@@ -347,15 +377,17 @@ li a, .dropbtn {
     display: none;
   }
 
+  .sticky-navbar {
+    display: none;
+  }
+
+  .sticky-navbar.active {
+    display: none;
+  }
+
   .nav-links, .search-bar {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    margin-left: 30%;
-    z-index: 100;
-    gap: 4px;
-    box-shadow: 3px 3px 5px rgb(40, 167, 69, 1);
-}
+   }
 
   .burguerNav {
     display: block;
