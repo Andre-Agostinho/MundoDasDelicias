@@ -12,13 +12,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+window.onscroll = function() {
+    const header = document.querySelector('.header');
+    const stickyNavbar = document.querySelector('.sticky-navbar');
+    const logo = document.querySelector('.logo');
+    
+    if (document.body.scrollTop >= 210 || document.documentElement.scrollTop >= 210) {
+        stickyNavbar.classList.add('active');
+    } else {
+        stickyNavbar.classList.remove('active');
+    }
+};
+
 function searchRecipe(event) {
     event.preventDefault();
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    
     if (!searchTerm) return;
 
-    // Mapa de receitas e suas páginas
     const recipePages = {
         // Entradas
         'entradas': '/MundoDasDelicias/Pages/Entradas.html',
@@ -50,8 +60,8 @@ function searchRecipe(event) {
     const recipeRegexes = {
      // Entradas
      'entradas': /entrada/i,
-     'bruschetta': /bruschetta|bruscheta/i, // Case-insensitive match
-     'pasteis de bacalhau': /pasteis.*bacalhau|pastel.*bacalhau/i, // Matches "pasteis de bacalhau" or "pasteis with bacalhau"
+     'bruschetta': /bruschetta|bruscheta/i, 
+     'pasteis de bacalhau': /pasteis.*bacalhau|pastel.*bacalhau/i, 
 
      //Sopas
      'sopas': /sopas/i,
@@ -60,7 +70,7 @@ function searchRecipe(event) {
      'creme de abobora': /creme.*abobora/i,
 
     // Pratos Principais
-    // 'pratos principais': /prato.*principal|prato.*principais/i,
+    'pratos principais': /prato.*principal|prato.*principais/i,
     'frango assado': /frango.*assado|frango.*forno/i,
     'bacalhau com natas': /bacalhau.*nata/i,
     'feijoada à portuguesa': /feijoada.*portuguesa|feijoada/i,
@@ -73,18 +83,15 @@ function searchRecipe(event) {
     'pudim de leite': /pudim.*leite/i,
     }
 
-    // Procura pela receita no mapa
     let found = false;
      for (const recipeKey in recipeRegexes) {
-        if (recipeRegexes[recipeKey].test(searchTerm)) { // Use regex.test()
-            window.location.href = recipePages[recipeKey]; //Assumes you have a recipePages object as well
+        if (recipeRegexes[recipeKey].test(searchTerm)) { 
+            window.location.href = recipePages[recipeKey]; 
             found = true;
             break;
         }
     }
 
-
-    // Mostra mensagem se nenhum resultado for encontrado
     if (!found) {
         let noResultsMsg = document.getElementById('no-results-message');
         if (!noResultsMsg) {
@@ -97,36 +104,30 @@ function searchRecipe(event) {
 function createNoResultsMessage() {
     const msg = document.createElement('div');
     msg.id = 'no-results-message';
-    msg.className = 'dropdown-message'; // Add a class for styling
+    msg.className = 'dropdown-message'; 
     msg.innerHTML = `Nenhuma receita encontrada.
      <button class="close-btn" aria-label="Close">&times;</button>`;
 
     const searchBar = document.querySelector('.search-bar');
-    
-    // Remove any existing message before adding a new one
     const existingMsg = document.getElementById('no-results-message');
     if (existingMsg) {
         existingMsg.remove();
     }
 
-    // Insert the message after the search bar
     searchBar.parentNode.insertBefore(msg, searchBar.nextSibling);
 
-    // Add event listener to the close button
     const closeButton = msg.querySelector('.close-btn');
     closeButton.addEventListener('click', function() {
-        msg.remove(); // Remove the message when the button is clicked
+        msg.remove(); 
     });
 
     return msg;
 }
 
-// Add event listener for "Enter" key
 document.getElementById('searchInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
         searchRecipe(event)
-        // handleSearch();
     }
 });
 
