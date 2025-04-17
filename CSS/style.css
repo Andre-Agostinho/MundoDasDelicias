@@ -452,6 +452,7 @@ li a, .dropbtn {
 
   .logo {
     margin: 10px;
+    transform: scale(0.9);
   }
 
   .menu-icon {
@@ -488,7 +489,7 @@ li a, .dropbtn {
   border: none;
   background-color: #dedada;
   padding: 8px 12px;
-  touch-action:auto ;
+  touch-action:auto;
 }
 
 
