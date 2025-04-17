@@ -445,8 +445,9 @@ li a, .dropbtn {
     background-color: #157347;
   }
 
-  li a, .nav-links, .search-bar {
+   li a ul, .nav-links, .search-bar {
     width: 100%;
+    margin-bottom: 0px;
   }
 
   .logo {
