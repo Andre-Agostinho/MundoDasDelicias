@@ -3,26 +3,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.getElementById("foodCarousel");
   const progressBar = carousel.querySelector(".carousel-progress-bar");
 
-  // Reset progress bar when slide changes
+  
   carousel.addEventListener("slide.bs.carousel", function () {
     progressBar.style.animation = "none";
-    void progressBar.offsetWidth; // Trigger reflow
+    void progressBar.offsetWidth;
     progressBar.style.animation = "progress-animation 4s linear infinite";
   });
 });
 
 
 window.onscroll = function() {
-    const header = document.querySelector('.header');
     const stickyNavbar = document.querySelector('.sticky-navbar');
-    const logo = document.querySelector('.logo');
-    
-    if (document.body.scrollTop >= 210 || document.documentElement.scrollTop >= 210) {
+    const stickyBurguerNav = document.querySelector('.sticky-burguerNav');
+    const strawFill = document.querySelector('.straw-fill');
+    const smallStrawFill = document.querySelector('.small-straw-fill');
+    const smallStrawContainer = document.querySelector('.small-straw-container');
+    const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    const maxScroll = 1150; 
+    const fillPercentage = Math.min(scrollTop / maxScroll, 1) * 100; 
+
+    strawFill.style.width = fillPercentage + '%'; 
+
+    if (scrollTop >= 210) {
         stickyNavbar.classList.add('active');
+        stickyBurguerNav.classList.add('active');
+        smallStrawContainer.style.display = 'block'; 
+        smallStrawFill.style.width = fillPercentage + '%'; 
     } else {
         stickyNavbar.classList.remove('active');
+        stickyBurguerNav.classList.remove('active');
+        smallStrawContainer.style.display = 'none'; 
     }
 };
+
 
 function searchRecipe(event) {
     event.preventDefault();
@@ -101,6 +114,7 @@ function searchRecipe(event) {
     }
 }
 
+
 function createNoResultsMessage() {
     const msg = document.createElement('div');
     msg.id = 'no-results-message';
@@ -113,16 +127,14 @@ function createNoResultsMessage() {
     if (existingMsg) {
         existingMsg.remove();
     }
-
     searchBar.parentNode.insertBefore(msg, searchBar.nextSibling);
-
     const closeButton = msg.querySelector('.close-btn');
     closeButton.addEventListener('click', function() {
         msg.remove(); 
     });
-
     return msg;
 }
+
 
 document.getElementById('searchInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
@@ -139,3 +151,10 @@ function toggleMenu() {
     navLinks.classList.toggle('burguerNav');
     searchBar.classList.toggle('search-barActive');
 }
+
+
+function toggleMenuBurguer() {
+    const navLinks = document.querySelector('.nav-linksBurguer');
+    navLinks.classList.toggle('sticky-burguerNav');
+}
+
