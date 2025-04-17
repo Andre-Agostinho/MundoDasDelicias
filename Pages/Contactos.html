@@ -45,18 +45,90 @@
 </header>
 
 <nav class="burguerNav">
- <img class="logo" src="../Images/Logo.png" alt="Logo"></img>
- <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
- <ul class="nav-links">
-     <li><a href="../">Home</a></li>
-     <li><a href="../Pages/Menu.html">Menu</a></li>
-     <li><a href="../Pages/Contactos.html">Contactos</a></li>
- </ul>
- <input type="text" class="search-bar" placeholder="Search...">
+  <img class="logo" src="Images/Logo.png" alt="Logo"></img>
+  <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+  <ul class="nav-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="../MundoDasDelicias/Pages/Menu.html">Menu</a></li>
+      <li><a href="../MundoDasDelicias/Pages/Contactos.html">Contactos</a></li>
+      <li> <div class="search-bar">
+        <form role="search" onsubmit="searchRecipe(event)">
+          <div class="input-group">
+            <input type="search" id="searchInput" class="form-control" placeholder="Procurar..." aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">
+              <div class="bi bi-search-heart" style="color: red;"></div>
+            </button>
+          </div>
+        </form>
+      </div> 
+      </li>
 </nav>
 
-    <div class="break-bar"></div>
+<nav class="sticky-navbar">
+     <img class="logo" src="Images/Logo.png" alt="Logo"></img>
+      <nav class="navbar">
+        <ul>
+          <li><a href="../MundoDasDelicias">Home</a> </li>
+          <li class="dropdown">
+            <a href="../MundoDasDelicias/Pages/Menu.html" class="dropbtn"> Menu </a>
+            <div class="dropdown-content">
+              <a href="../MundoDasDelicias/Pages/Entradas.html">Entradas</a>
+              <a href="../MundoDasDelicias/Pages/Sopas.html">Sopas</a>
+              <a href="../MundoDasDelicias/Pages/Pratos_Principais.html">Pratos Principais</a>
+              <a href="../MundoDasDelicias/Pages/Sobremesas.html">Sobremesas</a>
+            </div>
+         </li>  
+          <li> <a href="../MundoDasDelicias/Pages/Contactos.html">Contactos</a> </li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <form role="search" onsubmit="searchRecipe(event)">
+          <div class="input-group">
+            <input type="search" id="searchInput" class="form-control" placeholder="Procurar..." aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">
+              <div class="bi bi-search-heart" style="color: red;"></div>
+            </button>
+          </div>
+        </form>
+      </div> 
+</nav>
+    
 
+<nav class="sticky-burguerNav">
+  <img class="logo" src="Images/Logo.png" alt="Logo"></img>
+  <span class="menu-icon" onclick="toggleMenuBurguer()">&#9776;</span>
+  <ul class="nav-linksBurguer">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="../Pages/Menu.html">Menu</a></li>
+      <li><a href="../Pages/Contactos.html">Contactos</a></li>
+      <li> <div class="search-bar">
+        <form role="search" onsubmit="searchRecipe(event)">
+          <div class="input-group">
+            <input type="search" id="searchInput" class="form-control" placeholder="Procurar..." aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">
+              <div class="bi bi-search-heart" style="color: red;"></div>
+            </button>
+          </div>
+        </form>
+      </div> 
+      </li>
+  </ul>
+</nav>
+
+    
+<div class="small-straw-container">
+    <div class="small-straw">
+        <div class="small-straw-fill"></div>
+    </div>
+</div>
+
+<div class="straw-container">
+    <div class="straw">
+        <div class="straw-fill"></div>
+    </div>
+</div>
+
+  
     <section id="about-us" class="mb-5">
         <h2 class="text-center mb-4">Sobre Nós</h2>
             <p class="lead" style="text-align: center;"> No Mundo das Delícias, a nossa missão é inspirar os outros a explorar novas receitas, aprimorar as suas habilidades culinárias e a criar momentos memoráveis à mesa. 
