@@ -50,8 +50,17 @@
       <li><a href="../">Home</a></li>
       <li><a href="../MundoDasDelicias/Pages/Menu.html">Menu</a></li>
       <li><a href="../MundoDasDelicias/Pages/Contactos.html">Contactos</a></li>
-  </ul>
-  <input type="text" class="search-bar" placeholder="Search...">
+      <li> <div class="search-bar">
+        <form role="search" onsubmit="searchRecipe(event)">
+          <div class="input-group">
+            <input type="search" id="searchInput" class="form-control" placeholder="Procurar..." aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">
+              <div class="bi bi-search-heart" style="color: red;"></div>
+            </button>
+          </div>
+        </form>
+      </div> 
+      </li>
 </nav>
 
 <nav class="sticky-navbar">
@@ -83,13 +92,49 @@
       </div> 
 </nav>
     
-<div class="break-bar"></div>
+
+<nav class="sticky-burguerNav">
+  <img class="logo" src="Images/Logo.png" alt="Logo"></img>
+  <span class="menu-icon" onclick="toggleMenuBurguer()">&#9776;</span>
+  <ul class="nav-linksBurguer">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="../Pages/Menu.html">Menu</a></li>
+      <li><a href="../Pages/Contactos.html">Contactos</a></li>
+      <li> <div class="search-bar">
+        <form role="search" onsubmit="searchRecipe(event)">
+          <div class="input-group">
+            <input type="search" id="searchInput" class="form-control" placeholder="Procurar..." aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">
+              <div class="bi bi-search-heart" style="color: red;"></div>
+            </button>
+          </div>
+        </form>
+      </div> 
+      </li>
+  </ul>
+</nav>
+
+    
+<div class="small-straw-container">
+    <div class="small-straw">
+        <div class="small-straw-fill"></div>
+    </div>
+</div>
+
+<div class="straw-container">
+    <div class="straw">
+        <div class="straw-fill"></div>
+    </div>
+</div>
+    
 
 <main>
-    <div class="container mt-3"> <!-- margem top 5 = 3rem (=48px) -->
-        <section id="welcome" class="text-center mb-4"> <!-- alinha texto centro e margem bottom 5 = 3rem (=48px) -->
+    <div class="container mt-3"> 
+        <section id="welcome" class="text-center mb-4"> 
             <h1>Bem-vindo ao Mundo das Delícias</h1>
-            <p class="lead" style="font-weight: 400;"> Faça deste o seu destino online para explorar o maravilhoso mundo da culinária! Este site foi criado com a paixão por cozinhar e a vontade de compartilhar receitas deliciosas e acessíveis para todos os níveis de habilidade na cozinha. </p>
+            <p class="lead" style="font-weight: 400;"> Faça deste o seu destino online para explorar o 
+              maravilhoso mundo da culinária! Este site foi criado com a paixão por cozinhar e a vontade de compartilhar 
+              receitas deliciosas e acessíveis para todos os níveis de habilidade na cozinha. </p>
         </section>
 
         
@@ -98,7 +143,6 @@
             <div class="carousel-progress">
               <div class="carousel-progress-bar"></div>
           </div>
-              <!-- Indicators/dots -->
               <div class="carousel-indicators" style="margin-bottom: 5px;">
                   <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active"></button>
                   <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="1"></button>
@@ -106,7 +150,6 @@
                   <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="3"></button>
               </div>
 
-              <!-- The slideshow/carousel -->
               <div class="carousel-inner">
                   <div class="carousel-item active">
                       <img src="Images/Pasteis_de_Bacalhau.jpg" class="d-block w-100" alt="Food 1">
@@ -138,7 +181,6 @@
                 </div>
               </div>
 
-              <!-- Left and right controls/icons -->
               <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon"></span>
               </button>
@@ -153,7 +195,11 @@
 
 <div>
 
-  <div class="break-bar"></div>
+  <div class="straw-container">
+    <div class="straw">
+        <div class="straw-fill"></div>
+    </div>
+  </div>
 
 </div>
 <section id="receitas-semana" class="mb-3">
@@ -211,7 +257,11 @@
 </section>
 </main>
 
-<div class="break-bar"></div>
+<div class="straw-container">
+    <div class="straw">
+        <div class="straw-fill"></div>
+    </div>
+</div>
 
 <footer class="bg-dark text-light py-5">
   <div class="container">
