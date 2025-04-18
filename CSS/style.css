@@ -515,6 +515,7 @@ li a, .dropbtn {
 }
 
 .sticky-burguerNavLinks{
+  display: block;
   background-color: navajowhite;
   position: absolute;
   right: 0;
