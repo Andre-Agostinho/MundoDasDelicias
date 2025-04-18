@@ -19,7 +19,7 @@ window.onscroll = function() {
     const smallStrawFill = document.querySelector('.small-straw-fill');
     const smallStrawContainer = document.querySelector('.small-straw-container');
     const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-    const maxScroll = 1150; 
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight; 
     const fillPercentage = Math.min(scrollTop / maxScroll, 1) * 100; 
 
     strawFill.style.width = fillPercentage + '%'; 
