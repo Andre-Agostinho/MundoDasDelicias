@@ -155,6 +155,6 @@ function toggleMenu() {
 
 function toggleMenuBurguer() {
     const navLinks = document.querySelector('.nav-linksBurguer');
-    navLinks.classList.toggle('sticky-burguerNav');
+    navLinks.classList.toggle('sticky-burguerNavLinks');
 }
 
