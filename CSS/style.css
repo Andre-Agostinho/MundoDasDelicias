@@ -435,6 +435,10 @@ li a, .dropbtn {
     display: none;
   }
 
+  .nav-linksBurguer {
+    display: none;
+  }
+  
   .nav-links, .search-bar {
     display: none;
    }
@@ -510,7 +514,7 @@ li a, .dropbtn {
   margin-top: -37px;
 }
 
-.sticky-burguerNav.active .nav-linksBurguer{
+.sticky-burguerNavLinks{
   background-color: navajowhite;
   position: absolute;
   right: 0;
